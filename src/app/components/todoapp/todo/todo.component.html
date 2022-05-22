@@ -1,0 +1,15 @@
+<h1>To Do App</h1>
+<div class="main">
+  <div class="new-todo">
+    <input type="text" placeholder="Create a new to do" [(ngModel)]="newTask" />
+    <button (click)="createToDoHandler()" type="button">add to do</button>
+  </div>
+  <ul class="todos" *ngIf="todos.length > 0">
+    <app-todo-item
+      *ngFor="let todo of todos"
+      [todo]="todo"
+      (change)="onChangedHandler($event)"
+      (remove)="onDeleteHandler($event)"
+    ></app-todo-item>
+  </ul>
+</div>

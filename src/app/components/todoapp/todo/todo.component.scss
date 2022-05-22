@@ -1,0 +1,101 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  h1 {
+    font-size: 2.5rem;
+    text-align: center;
+  }
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.new-todo {
+  display: flex;
+  width: 100%;
+  margin-bottom: 1.5rem;
+  input {
+    padding: 0.6rem;
+    flex-grow: 1;
+    font: inherit;
+    font-size: 1.1rem;
+    border: 2px solid var(--color-green-200);
+
+    &:focus {
+      outline: none;
+      border: 2px solid var(--color-green-400);
+    }
+
+    &::placeholder {
+      font-size: 1rem;
+    }
+  }
+  button {
+    border: none;
+    padding: 0.5rem 1.2rem;
+    background-color: var(--color-green-200);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+    color: var(--color-green-600);
+    font: inherit;
+    cursor: pointer;
+
+    &:hover,
+    &:active {
+      background-color: var(--color-green-300);
+    }
+  }
+}
+
+.todos {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.actions {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
+
+  button {
+    border: 2px solid var(--color-green-300);
+    padding: 0.4rem 1rem;
+    background-color: var(--color-green-100);
+    color: var(--color-green-600);
+    font: inherit;
+    cursor: pointer;
+
+    &:active,
+    &:hover {
+      background-color: var(--color-green-300);
+    }
+  }
+
+  .active {
+    background-color: var(--color-green-300);
+  }
+  .danger {
+    background-color: rgb(255, 134, 134);
+    border: 2px solid rgba(255, 134, 134, 0.696);
+    color: var(--color-gray-800);
+    &:hover,
+    &:active {
+      background-color: rgba(255, 134, 134, 0.696);
+    }
+  }
+}
+
+.notification {
+  text-align: center;
+  margin: 2rem 0;
+}

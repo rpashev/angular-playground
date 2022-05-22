@@ -1,0 +1,10 @@
+<li class="todo">
+  <input
+    type="checkbox"
+    [id]="todo.id"
+    (change)="onChange($event)"
+    [checked]="todo.status === 'completed' ? true : false"
+  />
+  <label [for]="todo.id">{{ todo.task }}</label>
+  <button (click)="onDelete()">Delete</button>
+</li>

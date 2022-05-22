@@ -5,18 +5,20 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
 import { NotFoundPageComponent } from './components/not-found-page/not-found-page.component';
+import { TodoComponent } from './components/todoapp/todo/todo.component';
+import { TodoItemComponent } from './components/todoapp/todo-item/todo-item.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    NotFoundPageComponent
+    NotFoundPageComponent,
+    TodoComponent,
+    TodoItemComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+  imports: [FormsModule, BrowserModule, AppRoutingModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
